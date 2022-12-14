@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+body{
+    background-color: #fffaf5;
+}
+
+header {
+    width: 100%;
+    height: 110px;
+    background-color: #ef7d03;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+    gap: 50px;
+}
+
+header img {
+    height: 60px;
+}
+
+header h1 {
+    text-align: center;
+    white-space: nowrap;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.login-container-main {
+    width: 80%;
+    max-width: 1000px;
+    margin-top: 190px;
+    height: 700px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: row;
+}
+
+.login-container-main img{
+    width: 50%;
+    height: 100%;
+    border-radius: 50px 0px 0px 50px;
+}
+
+.login-container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px;
+    gap: 20px;
+}
+
+.login-container h1{
+    width: 100%;
+    text-align: center;
+}
+
+.login-container .btn-login{
+    height: 50px;
+    background-color: red;
+    border: 2px solid red;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+
+.login-container .btn-register{
+    height: 50px;
+    background-color: white;
+    border: 2px solid red;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    color: black;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+
+.login-container .btn-login:active{
+   background-color: rgb(212, 0, 0);
+   border: 2px solid rgb(212, 0, 0);
+}
+
+form label{
+    margin-top: 15px;
+    display: inline-block;
+}
+
+form input{
+    width: 100%;
+    padding: 10px 15px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 15px;
+}
+

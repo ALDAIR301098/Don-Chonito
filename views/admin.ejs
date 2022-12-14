@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="resources/css/admin.css">
+
+</head>
+
+<body>
+
+    <header>
+        <div class="company">
+            <img src="resources/images/logo_don_chonito.png" alt="Logo">
+            <h1>Panaderia Don Chonito</h1>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="http://localhost:3000/catalog">Catalogo</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="main-container">
+            <div class="container catalog">
+                <h3>Administrar Catalogo de panes</h3>
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">id</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Precio</th>
+                            <th scope="col">Imagen</th>
+                            <th scope="col">Administrar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <%breads.forEach(breads=>{%>
+                        <tr>
+                            
+                            <td><%= breads.breadId %></td>
+                            <td><%= breads.name %></td>
+                            <td><%= breads.price %></td>
+                            <td> <a href="http://localhost:3000/<%= breads.imageUrl %>">Ver</a> </td>
+                            <td> <button>Modificar</button> </td>
+                            <td> <button>Eliminar</button> </td>
+                        </tr>
+                        <%})%>
+                        
+                    </tbody>
+                </table>
+            </div>
+            <div class="container register">
+                <h3>Registrar nueva clase de pan</h3>
+
+                <form action="/uploadBread" method="POST" enctype="multipart/form-data">
+
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" value="" required>
+                
+                    <label for="price">Precio:</label>
+                    <input type="number" id="price" name="price" value="" required>
+
+                    <label for="image">Imagen:</label>
+                    <input type="file" id="image" name="image" accept="image/*">
+
+                    <input type="submit" class="btn-register" value="Registrar pan">
+                
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <% if (typeof alert != "undefined") { %>
+        <script>
+            Swal.fire({
+                title:'<%= alertTitle %>',
+                text:'<%= alertMessage %>',
+                icon:'<%= alertIcon %>',
+                showConfirmButton: <%= showConfirmButton %>,
+                timer: <%= timer %>
+            }).then(()=>{
+                window.location='<%= ruta %>'
+            })
+        </script>
+      <% } %>
+
+</body>
+
+</html>
