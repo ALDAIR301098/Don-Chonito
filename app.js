@@ -32,6 +32,8 @@ app.use('/static', express.static(path.join(__dirname, 'public')))
 app.use('/resources', express.static('public'));
 app.use('/resources', express.static(__dirname + '/public'));
 app.use(express.static('public'));
+app.use('/images', express.static(path.join(__dirname, 'images')));
+app.use('/images', express.static(path.join(__dirname, 'images/breads')));
 
 // 5- Establecer el motor de plantillas
 app.set('view engine', 'ejs');
