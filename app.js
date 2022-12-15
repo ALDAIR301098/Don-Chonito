@@ -159,7 +159,7 @@ app.post('/register', async (req, res) => {
     const password = req.body.password;
     let passwordHash = await bcryptjs.hash(password, 8);
 
-    connection.query('INSERT INTO USERS SET ?', {
+    connection.query('INSERT INTO users SET ?', {
         name: name,
         lastName: lastName,
         gender: gender,
