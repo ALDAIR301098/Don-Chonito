@@ -7,11 +7,11 @@ const DB_NAME = process.env.DB_DATABASE || 'railway'
 const DB_PORT = process.env.DB_PORT || '5542'
 
 const connection =  mysql.createConnection({
-    host: 'containers-us-west-163.railway.app',
+    host: 'containers-us-west-168.railway.app',
     user: 'root',
-    password: 'pepito123',
+    password: 'XNtjfM0oTJTmKWtNn07M',
     database: 'railway',
-    port: '5542'
+    port: '5706'
 });
 
 connection.connect((error) => {
