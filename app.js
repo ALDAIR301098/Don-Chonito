@@ -64,7 +64,7 @@ app.get('/login', (req, res) => {
 app.post('/auth', async (req, res) => {
     const mail = req.body.mail;
     const password = req.body.password;
-    connection.query('SELECT * FROM USERS WHERE mail = ?', [mail], async (error, results) => {
+    connection.query('SELECT * FROM users WHERE mail = ?', [mail], async (error, results) => {
         if(error) {
             throw error;
         }
