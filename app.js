@@ -65,7 +65,10 @@ app.post('/auth', async (req, res) => {
     const mail = req.body.mail;
     const password = req.body.password;
     connection.query('SELECT * FROM USERS WHERE mail = ?', [mail], async (error, results) => {
-        if (results.length != 0) {
+        if(error) {
+            throw error;
+        }
+        else if (results.length != 0) {
             if(password == results[0].password || (await bcryptjs.compare(password,results[0].password))){
                 let data = {
                     alert: true,
