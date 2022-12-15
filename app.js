@@ -4,6 +4,8 @@ const app = express();
 const multer = require('multer');
 const path = require('path')
 
+const PORT = process.env.PORT || 3000;
+
 const storage = multer.diskStorage({
     destination: path.join('public/images/breads'),
     filename: (req, file, cb) =>{
@@ -141,7 +143,7 @@ app.post('/uploadBread', async(req,res,) => {
     })
 });
 
-app.listen(3000, (req, res) => {
+app.listen(PORT, (req, res) => {
     console.log("SERVER RUNING IN http://localhost:3000");
 })
 
