@@ -28,6 +28,7 @@ const dotenv = require('dotenv');
 dotenv.config({ path: './env/.env' })
 
 // 4- Setear el directorio public
+app.use('/static', express.static(path.join(__dirname, 'public')))
 app.use('/resources', express.static('public'));
 app.use('/resources', express.static(__dirname + '/public'));
 app.use(express.static('public'));
