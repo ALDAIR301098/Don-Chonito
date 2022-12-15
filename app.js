@@ -122,7 +122,7 @@ app.post('/uploadBread', async(req,res,) => {
     const price = parseFloat(req.body.price);
     const image = req.file.filename;
 
-    connection.query('INSERT INTO BREADS SET ?', {
+    connection.query('INSERT INTO breads SET ?', {
         name: name,
         price: price,
         imageUrl: "images/breads/" + image
