@@ -8,8 +8,8 @@ const DB_PORT = process.env.DB_PORT || '5542'
 
 const connection =  mysql.createConnection({
     host: 'containers-us-west-168.railway.app',
-    user: 'root',
-    password: 'XNtjfM0oTJTmKWtNn07M',
+    user: 'aldair',
+    password: 'tecmm123',
     database: 'railway',
     port: '5706'
 });
